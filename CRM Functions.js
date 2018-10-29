@@ -376,7 +376,6 @@ pageContext: function () {
 		userName: Xrm.Page.context.getUserName(),								//String of user name
 		isDirty: Xrm.Page.data.entity.getIsDirty(),								//Returns a boolean if any field on the form has been modified
 		clientType: Xrm.Page.context.client.getClient(),						//values can be 'Web' / 'Outlook' / 'Mobile'
-		//formFactor: Xrm.Page.context.getFormFactor(),							//0 = Unknown  / 1 = Desktop  / 2 = Tablet / 3 = Phone
 		formName: Xrm.Page.ui.formSelector.getCurrentItem().getLabel()			//String value of form name
 	};
 	return pageContext;
@@ -403,7 +402,7 @@ rolecheck: function(roleGUID) {
 	// Takes a security role GUID and checks all roles assigned to current user to see if they have been assigned the role
 	var userRoles = CRM.pageContext.userRoles;
 	for (var i in userRoles) {
-		if (userRoles[i] = roleGUID) {
+		if (userRoles[i] == roleGUID) {
 			return true;
 		}
 	}
