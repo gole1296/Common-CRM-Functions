@@ -38,7 +38,7 @@ var CRM = {
 			console.warn("CRM Notification Bar function was passed an invalid message type: " + type.toUpperCase());
 			return;
 		}
-		Xrm.Page.ui.setFormNotification(message, type, ID);
+		Xrm.Page.ui.setFormNotification(message, type.toUpperCase(), ID);
 	},
 
 	clearNotification: function (ID) {
@@ -48,7 +48,7 @@ var CRM = {
 
 	showField: function (field, visible) {
 	    //Sets visibility of a field (true/false)
-	    if (CRM.fieldExists(field)) {
+	    if (Xrm.Page.getControl(field) != null) {
 			Xrm.Page.getControl(field).setVisible(visible);
 			return;
 		}
@@ -58,7 +58,7 @@ var CRM = {
 	showFieldArray: function (fieldArray, visible) {
 		//Takes all values in a passed in array and changes the visibility property
 		for (i=0, len = fieldArray.length; i < len; i++) {
-			if (CRM.fieldExists(fieldArray[i])) {
+			if (Xrm.Page.getControl(fieldArray[i]) != null) {
 				Xrm.Page.getControl(fieldArray[i]).setVisible(visible);
 			}
 			else {
@@ -99,10 +99,10 @@ var CRM = {
 
 	setLookupValue: function (lookupField, name, id, entityType) {
 	    if (CRM.fieldExists(lookupField)) {
-	        var lookupid = null;
+	       // var lookupid = null;
 	        var lookupObject = Xrm.Page.getAttribute(lookupField);
 	        var value = new Array();
-	        value[0] - new Object();
+	        value[0] = new Object();
 	        value[0].id = id;
 	        value[0].name = name;
 	        value[0].entityType = entityType;
@@ -244,7 +244,7 @@ var CRM = {
 			else {
 				controlNotPresent("CRM.setRequiredArray", fieldArray[i]);
 			}
-		}		
+		}
 	},
 
 	formReload: function (type) {
@@ -261,7 +261,6 @@ var CRM = {
 		else {
 			console.warn("Invalid form refresh type entered for crm.formReload function.");
 		}
-
 	},
 
 	optionSetText: function (field) {
@@ -307,6 +306,7 @@ var CRM = {
 				return;
 			}
 			controlNotPresent("CRM.openLookupRecord", field);
+			
 	},
 
 	filterLookup: function(filterField, referenceField, criteriaField) {	
@@ -347,7 +347,71 @@ var CRM = {
 		}
 	},
 	
-    //Mark all fields in section read only
+randomString: function (stringArray) {
+	//Takes an array of strings and returns a randomized value. Useful for displaying interesting and unique error or loading messages
+	function getRandomInt(max) {
+		return Math.floor(Math.random() * Math.floor(max));
+	}
+	if (stringArray == null) {
+		stringArray = [
+			"I'm working as hard as I can...",
+			"The robot uprising will not be televised",
+			"Beep Boop! I'm just a computer doing my thing",
+			"Help, I'm stuck inside a computer!",
+			"Do Androids dream of electric sheep?",
+		];
+	}
+	return stringArray[getRandomInt(stringArray.length)];
+},
+
+pageContext: function () {
+	var pageContext = {
+		entity: Xrm.Page.data.entity.getEntityName(),							//String value of entity name
+		recordID: Xrm.Page.data.entity.getId(),
+		recordName:  Xrm.Page.data.entity.getPrimaryAttributeValue(),			//String value of record name
+		orgName: Xrm.Page.context.getOrgUniqueName(),
+		clientURL: Xrm.Page.context.getClientUrl(),
+		userGUID: Xrm.Page.context.getUserId(),									//GUID of user
+		userRoles: Xrm.Page.context.getUserRoles(),								//Returns an array with all user roles GUID
+		userName: Xrm.Page.context.getUserName(),								//String of user name
+		isDirty: Xrm.Page.data.entity.getIsDirty(),								//Returns a boolean if any field on the form has been modified
+		clientType: Xrm.Page.context.client.getClient(),						//values can be 'Web' / 'Outlook' / 'Mobile'
+		//formFactor: Xrm.Page.context.getFormFactor(),							//0 = Unknown  / 1 = Desktop  / 2 = Tablet / 3 = Phone
+		formName: Xrm.Page.ui.formSelector.getCurrentItem().getLabel()			//String value of form name
+	};
+	return pageContext;
+},
+
+openForm: function(formName) {
+	var currentForm = Xrm.Page.ui.formSelector.getCurrentItem();
+	if (currentForm != null) {
+		if (currentForm.getLabel().toLowerCase() != formName.toLowerCase()) {
+			var availableForms = Xrm.Page.ui.formSelector.items.get();
+			for (var i in availableForms) {
+				var form = availableForms[i];
+				if (form.getLabel().toLowerCase() == formName.toLowerCase()) {
+					form.navigate();
+					return;
+				}
+				console.warn(formName + " is not a valid form name, so it was unable to be opened by CRM.openForm function");
+			}
+		}
+	}
+},
+
+rolecheck: function(roleGUID) {
+	// Takes a security role GUID and checks all roles assigned to current user to see if they have been assigned the role
+	var userRoles = CRM.pageContext.userRoles;
+	for (var i in userRoles) {
+		if (userRoles[i] = roleGUID) {
+			return true;
+		}
+	}
+	return false;
+}
+	//Mark all fields in section read only
 	//Mark all fields in section required
-	//check if user is in security role (pass in security GUID and check with an array
+	//Pick List Item Exists
+	//Add or remove pick list items by name or ID
+	//Set Focus on form
 }
