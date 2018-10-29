@@ -22,3 +22,4 @@ This wiki will give an explanation of each function, and the input parameters ne
 [Field Visibility Functions](https://github.com/gole1296/Common-CRM-Functions/wiki/Change-Field-Visibility-Functions) <br>
 [Page / Browser Context Functions](https://github.com/gole1296/Common-CRM-Functions/wiki/Page---Browser-Context-Functions)<br>
 [Miscellaneous Functions](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions)<br>
+[Locking Fields as Read Only](https://github.com/gole1296/Common-CRM-Functions/wiki/Read-Only-and-Editable-Fields)<br>
