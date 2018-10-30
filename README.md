@@ -26,19 +26,19 @@ This wiki will give an explanation of each function, and the input parameters ne
 [Locking Fields as Read Only](https://github.com/gole1296/Common-CRM-Functions/wiki/Read-Only-and-Editable-Fields)<br>
 
 ## All Functions
-<br>[CRM.fieldExists]
-<br>[CRM.tabExists]
-<br>[CRM.sectionExists]
+<br>[CRM.fieldExists](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#field--tab--section-exists)
+<br>[CRM.tabExists](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#field--tab--section-exists)
+<br>[CRM.sectionExists](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#field--tab--section-exists)
 <br>[CRM.returnValue]
-<br>[CRM.notificationBar]
-<br>[CRM.clearNotification]
+<br>[CRM.notificationBar](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#set-or-clear-notification-bar-on-form)
+<br>[CRM.clearNotification](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#set-or-clear-notification-bar-on-form)
 <br>[CRM.showField](https://github.com/gole1296/Common-CRM-Functions/wiki/Change-Field-Visibility-Functions)
 <br>[CRM.showFieldArray](https://github.com/gole1296/Common-CRM-Functions/wiki/Change-Field-Visibility-Functions)
 <br>[CRM.showSection](https://github.com/gole1296/Common-CRM-Functions/wiki/Change-Field-Visibility-Functions)
 <br>[CRM.showTab](https://github.com/gole1296/Common-CRM-Functions/wiki/Change-Field-Visibility-Functions)
 <br>[CRM.setLookupValue]
 <br>[CRM.saveRecord](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#save-record)
-<br>[CRM.fieldWarning]
+<br>[CRM.fieldWarning](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#field-warning)
 <br>[CRM.openQuickCreate](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#open-quick-create-form)
 <br>[CRM.showBPF](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#show-or-hide-business-process-flow)
 <br>[CRM.refreshWebResource](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#refresh-web-resource)
@@ -56,5 +56,5 @@ This wiki will give an explanation of each function, and the input parameters ne
 <br>[CRM.filterLookup](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#filter-a-lookup-field-based-on-another-field-value)
 <br>[CRM.randomString]
 <br>[CRM.pageContext](https://github.com/gole1296/Common-CRM-Functions/wiki/Page---Browser-Context-Functions#page-context-function)
-<br>[CRM.openForm]
-<br>[CRM.roleCheck]
+<br>[CRM.openForm](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#open-form)
+<br>[CRM.roleCheck](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#security-role-check)
