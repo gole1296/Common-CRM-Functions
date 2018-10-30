@@ -1,5 +1,7 @@
 /*
-Dynamics CRM Common JavaScript functions
+Dynamics CRM Common JavaScript functions: by Tom Gioielli
+Project Available on Github at https://github.com/gole1296/Common-CRM-Functions
+Version 2018.10.30
 */
 
 function controlNotPresent(process, control) {
@@ -28,6 +30,18 @@ var CRM = {
 	    if (CRM.fieldExists(field)) {
 	        var fieldValue = Xrm.Page.getAttribute(field).getValue();
 	        return fieldValue;
+		}
+		controlNotPresent("CRM.returnValue", field);
+	},
+
+	getLookupValue: function (field) {
+		if (CRM.fieldExists(field)) {
+			var value = {
+				id: Xrm.Page.getAttribute(field).getValue()[0].id,
+				name: Xrm.Page.getAttribute(field).getValue()[0].name,
+				entity: Xrm.Page.getAttribute(field).getValue()[0].entityType
+			};
+			return value;
 		}
 		controlNotPresent("CRM.returnValue", field);
 	},
@@ -398,7 +412,7 @@ openForm: function(formName) {
 	}
 },
 
-rolecheck: function(roleGUID) {
+roleCheck: function(roleGUID) {
 	// Takes a security role GUID and checks all roles assigned to current user to see if they have been assigned the role
 	var userRoles = CRM.pageContext.userRoles;
 	for (var i in userRoles) {
@@ -408,9 +422,4 @@ rolecheck: function(roleGUID) {
 	}
 	return false;
 }
-	//Mark all fields in section read only
-	//Mark all fields in section required
-	//Pick List Item Exists
-	//Add or remove pick list items by name or ID
-	//Set Focus on form
 }
