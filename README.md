@@ -29,14 +29,15 @@ This wiki will give an explanation of each function, and the input parameters ne
 <br>[CRM.fieldExists](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#field--tab--section-exists)
 <br>[CRM.tabExists](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#field--tab--section-exists)
 <br>[CRM.sectionExists](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#field--tab--section-exists)
-<br>[CRM.returnValue]
+<br>[CRM.returnValue](https://github.com/gole1296/Common-CRM-Functions/wiki/Getting-and-Setting-Field-Values#get-field-value)
 <br>[CRM.notificationBar](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#set-or-clear-notification-bar-on-form)
 <br>[CRM.clearNotification](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#set-or-clear-notification-bar-on-form)
 <br>[CRM.showField](https://github.com/gole1296/Common-CRM-Functions/wiki/Change-Field-Visibility-Functions)
 <br>[CRM.showFieldArray](https://github.com/gole1296/Common-CRM-Functions/wiki/Change-Field-Visibility-Functions)
 <br>[CRM.showSection](https://github.com/gole1296/Common-CRM-Functions/wiki/Change-Field-Visibility-Functions)
 <br>[CRM.showTab](https://github.com/gole1296/Common-CRM-Functions/wiki/Change-Field-Visibility-Functions)
-<br>[CRM.setLookupValue]
+<br>[getLookupValue](https://github.com/gole1296/Common-CRM-Functions/wiki/Getting-and-Setting-Field-Values#get-lookup-field-values)
+<br>[CRM.setLookupValue](https://github.com/gole1296/Common-CRM-Functions/wiki/Getting-and-Setting-Field-Values#set-lookup-field-value)
 <br>[CRM.saveRecord](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#save-record)
 <br>[CRM.fieldWarning](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#field-warning)
 <br>[CRM.openQuickCreate](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#open-quick-create-form)
@@ -50,7 +51,7 @@ This wiki will give an explanation of each function, and the input parameters ne
 <br>[CRM.setRequired](https://github.com/gole1296/Common-CRM-Functions/wiki/Field-Requirement-Level#mark-a-field-required--recommended--not-required)
 <br>[CRM.setRequiredArray](https://github.com/gole1296/Common-CRM-Functions/wiki/Field-Requirement-Level#mark-an-array-of-fields-required--recommended--not-required)
 <br>[CRM.formReload](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#form-reload-and-refresh)
-<br>[CRM.optionSetText]
+<br>[CRM.optionSetText](https://github.com/gole1296/Common-CRM-Functions/wiki/Getting-and-Setting-Field-Values#get-option-set-text-value)
 <br>[CRM.formatPhone](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#format-phone-number-10-digit-us-format)
 <br>[CRM.openLookupRecord](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#open-the-contents-of-a-lookup-field)
 <br>[CRM.filterLookup](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#filter-a-lookup-field-based-on-another-field-value)
