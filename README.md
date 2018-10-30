@@ -57,4 +57,3 @@ This wiki will give an explanation of each function, and the input parameters ne
 <br>[CRM.filterLookup](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#filter-a-lookup-field-based-on-another-field-value)
 <br>[CRM.pageContext](https://github.com/gole1296/Common-CRM-Functions/wiki/Page---Browser-Context-Functions#page-context-function)
 <br>[CRM.openForm](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#open-form)
-<br>[CRM.roleCheck](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#security-role-check)
