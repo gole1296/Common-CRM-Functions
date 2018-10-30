@@ -192,26 +192,24 @@ var CRM = {
 			}
 	},
 
-	setReadOnlySection: function (sectionName, locked) {
+	setReadOnlySection: function (tabName, sectionName, locked) {
 		// Cycles through all controls on the form and checks the section they are in. If it matches the parameter section, the field is marked as disabled or enabled
-		var controlName = Xrm.Page.ui.controls.get();
-		for (var i in controlName) {
-			var control = controlName[i];
-			var controlSection = control.getParent().getName();
-			if (controlSection == sectionName) {
+		Xrm.Page.ui.tabs.get(tabName).sections.get(sectionName).controls.forEach(
+			// Delegate to set the status of all controls within the section.
+			function (control, index) {
 				control.setDisabled(locked);
-			}
-		}
+			});
+	
 	},
 
 	setReadOnlyTab: function(tabName, locked) {
 		// Looks for the tab and finds all sections placed within it. Then marks each field in those sections as locked
 		var tab = Xrm.Page.ui.tabs.get(tabName);
-		if (tabExists(tabName)) {
+		if (CRM.tabExists(tabName)) {
 			var tabsections = tab.sections.get();
 			for (var i in tabsections) {
 				var sectionName = tabsections[i].getName();
-				CRM.setReadOnlySection(sectionName, locked);
+				CRM.setReadOnlySection(tabName, sectionName, locked);
 			}
 		}
 		console.warn("CRM.setReadOnlyTab was not processed because there is no tab named " + tabName + " on the form." );
@@ -414,7 +412,9 @@ openForm: function(formName) {
 
 roleCheck: function(roleGUID) {
 	// Takes a security role GUID and checks all roles assigned to current user to see if they have been assigned the role
-	var userRoles = CRM.pageContext.userRoles;
+	//NOT YET TESTED SUCCESSFULLY
+	var context = CRM.pageContext();
+	var userRoles = context.userRoles;
 	for (var i in userRoles) {
 		if (userRoles[i] == roleGUID) {
 			return true;
