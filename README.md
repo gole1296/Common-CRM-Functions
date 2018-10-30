@@ -1,4 +1,4 @@
-# Common-CRM-Functions (WORK IN PROGRESS)
+# Common-CRM-Functions
 This is a single web resource file, so it can be added to your deployment manually or added via the solution provided. Nothing other than the web resource is added to your deployment.
 
 To add to your CRM:
