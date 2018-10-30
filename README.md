@@ -42,12 +42,12 @@ This wiki will give an explanation of each function, and the input parameters ne
 <br>[CRM.openQuickCreate](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#open-quick-create-form)
 <br>[CRM.showBPF](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#show-or-hide-business-process-flow)
 <br>[CRM.refreshWebResource](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#refresh-web-resource)
-<br>[CRM.setReadOnly](
-<br>[CRM.setReadOnlyArray]
-<br>[CRM.setReadOnlySection]
-<br>[CRM.setReadOnlyTab]
-<br>[CRM.setReadOnlyAllFields]
-<br>[CRM.setRequired] (https://github.com/gole1296/Common-CRM-Functions/wiki/Field-Requirement-Level#mark-a-field-required--recommended--not-required)
+<br>[CRM.setReadOnly](https://github.com/gole1296/Common-CRM-Functions/wiki/Read-Only-and-Editable-Fields#set-a-field-to-be-read-only-non-editable)
+<br>[CRM.setReadOnlyArray](https://github.com/gole1296/Common-CRM-Functions/wiki/Read-Only-and-Editable-Fields#set-an-array-of-fields-to-be-read-only)
+<br>[CRM.setReadOnlySection](https://github.com/gole1296/Common-CRM-Functions/wiki/Read-Only-and-Editable-Fields#set-all-fields-in-a-section-to-be-read-only)
+<br>[CRM.setReadOnlyTab](https://github.com/gole1296/Common-CRM-Functions/wiki/Read-Only-and-Editable-Fields#set-all-fields-in-a-tab-to-be-read-only)
+<br>[CRM.setReadOnlyAllFields](https://github.com/gole1296/Common-CRM-Functions/wiki/Read-Only-and-Editable-Fields#set-all-fields-on-the-form-to-be-read-only)
+<br>[CRM.setRequired](https://github.com/gole1296/Common-CRM-Functions/wiki/Field-Requirement-Level#mark-a-field-required--recommended--not-required)
 <br>[CRM.setRequiredArray](https://github.com/gole1296/Common-CRM-Functions/wiki/Field-Requirement-Level#mark-an-array-of-fields-required--recommended--not-required)
 <br>[CRM.formReload](https://github.com/gole1296/Common-CRM-Functions/wiki/Miscellaneous-Functions#form-reload-and-refresh)
 <br>[CRM.optionSetText]
