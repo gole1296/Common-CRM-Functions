@@ -1,4 +1,6 @@
 # Common-CRM-Functions
+The Common CRM Functions JavaScript library is designed for Microsoft Dynamics CRM Administrators or Developers who would like an easy way to complete customizations in CRM without having to worry about all of the syntax of the XRM structure. It gives easy to use functions to complete a wide variety of actions, the combination of which can solve many issues facing a CRM deployment. 
+
 This is a single web resource file, so it can be added to your deployment manually or added via the solution provided. Nothing other than the web resource is added to your deployment.
 
 To add to your CRM:
@@ -8,8 +10,6 @@ To add to your CRM:
 3) Import the zipped managed solution folder to your CRM, or add the single .js file to your own solution as a web resource
 4) Be sure to add the script to your form before attempting to call any of the functions
 
-The Common CRM Functions JavaScript library is designed for Microsoft Dynamics CRM Administrators or Developers who would like an easy way to complete customizations in CRM without having to worry about all of the syntax of the XRM structure. It gives easy to use functions to complete a wide variety of actions, the combination of which can solve most issues facing a CRM deployment. 
-
 This wiki will give an explanation of each function, and the input parameters needed to for it to run successfully. There are some important notes on this library.
 
 ***
@@ -17,6 +17,9 @@ This wiki will give an explanation of each function, and the input parameters ne
 1) In order for you to access the functions in your CRM Org, the web resource must be added to the entity form.
 2) Many of the functions have built in fail-safes, preventing them from running and throwing an error if a field is not present or incorrect information was passed in. Most, if not all, of these fail-safes will create an entry in your console log indicating what function was bypassed and why. While not perfect, it should help avoid common mistakes.
 3) All functions calls are formatted as 'CRM.<functionName>' for easier understanding of which calls in your code point to this library
+4) This is meant to be a resource for Administrators and some developers working in CRM. It does not include any advanced functions, such as SOAP or REST. It does not require any other JS libraries to be installed.
+  
+## Please leave any issues or requests on the issue page above, or you can provide feedback to me at my website: [The Functional CRM Admin](https://functional-crm-admin.weebly.com/about-me.html)
 
 ## Function Documentation by Type
 [Field Visibility Functions](https://github.com/gole1296/Common-CRM-Functions/wiki/Change-Field-Visibility-Functions) <br>
