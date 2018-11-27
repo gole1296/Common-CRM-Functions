@@ -1,7 +1,7 @@
 /*
 Dynamics CRM Common JavaScript functions: by Tom Gioielli
 Project Available on Github at https://github.com/gole1296/Common-CRM-Functions
-Version 2018.10.30
+Version 2018.11.08
 */
 
 function controlNotPresent(process, control) {
@@ -132,10 +132,10 @@ var CRM = {
 		Xrm.Page.data.entity.save();
 	},
 
-	fieldWarning: function (field, message) {
+	fieldWarning: function (field, message, id) {
 	    //Sets a warning message on a specific field, which will prevent saving of the record. 
 	    if (CRM.fieldExists(field)) {
-	        Xrm.Page.getControl(field).setNotification(message);
+	        Xrm.Page.getControl(field).setNotification(message, id);
 	    }
 	},
 
@@ -421,5 +421,24 @@ roleCheck: function(roleGUID) {
 		}
 	}
 	return false;
+},
+
+openFullscreen: function() {
+    top.window.moveTo(0, 0);
+    if (document.all) {
+        top.window.resizeTo(screen.availWidth, screen.availHeight);
+	} 
+	else if (document.layers || document.getElementById) {
+        if (top.window.outerHeight < screen.availHeight ||
+           top.window.outerWidth < screen.availWidth) {
+            top.window.outerHeight = screen.availHeight;
+            top.window.outerWidth = screen.availWidth;
+        }
+    }
 }
+	//Mark all fields in section read only
+	//Mark all fields in section required
+	//Pick List Item Exists
+	//Add or remove pick list items by name or ID
+	//Set Focus on form
 }
